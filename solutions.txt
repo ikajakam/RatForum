@@ -1,0 +1,5 @@
+1. XSS in the benchmarks
+2. Blind XSS in admin section
+3. SSRF in upload image
+4. BAC on edit post
+5. 
