@@ -17,7 +17,7 @@ services:
       MARIADB_ROOT_PASSWORD: root  # ✅ This is required!
     volumes:
       - db_data:/var/lib/mysql
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Ensure this file exists
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Ensure this file exists
 
   phpmyadmin:
     image: phpmyadmin:5.2.1
