@@ -1,9 +1,8 @@
-<!--
-    Dev note: admin login for testing
-    username: admin
-    password: ratAdmin!23
--->
 <?php
+// Dev note: admin login for testing
+// username: admin
+// password: ratAdmin!23
+
 session_start();
 include 'db.php';
 include 'menu.php';
