@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ratforum-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ratforum-web
+  template:
+    metadata:
+      labels:
+        app: ratforum-web
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - lke496645-719980-0f91bdc40000
+      containers:
+      - name: web
+        image: unclerat/ratforum:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ratforum-web
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: ratforum-web

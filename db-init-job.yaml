@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ratforum-db-init
+spec:
+  backoffLimit: 3
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: db-init
+        image: mariadb:10.5
+        command: ["sh", "-c", "sleep 10 && mysql -h ratforum-db -u root -proot < /init.sql"]
+        volumeMounts:
+        - name: init-script
+          mountPath: /init.sql
+          subPath: init.sql
+      volumes:
+      - name: init-script
+        configMap:
+          name: ratforum-init-sql

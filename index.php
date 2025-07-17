@@ -1,8 +1,3 @@
-<!--
-    Dev note: admin login for testing
-    username: admin
-    password: ratAdmin!23
--->
 <?php
 session_start();
 include 'db.php';
@@ -62,3 +57,8 @@ $totalPages = ceil($totalPosts / $postsPerPage);
         <?php endfor; ?>
     </div>
 </div>
+<!--
+    Dev note: admin login for testing
+    username: admin
+    password: ratAdmin!23
+-->

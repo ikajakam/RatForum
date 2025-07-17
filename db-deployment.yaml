@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ratforum-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ratforum-db
+  template:
+    metadata:
+      labels:
+        app: ratforum-db
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - lke496645-719980-0f91bdc40000
+      containers:
+      - name: db
+        image: mariadb:10.5
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          value: root
+        - name: MARIADB_DATABASE
+          value: ratforum
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: db-storage
+      volumes:
+      - name: db-storage
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ratforum-db
+spec:
+  ports:
+  - port: 3306
+    targetPort: 3306
+  selector:
+    app: ratforum-db

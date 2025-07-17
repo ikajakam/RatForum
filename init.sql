@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `ratforum`
 --
-
+CREATE DATABASE IF NOT EXISTS ratforum;
+USE ratforum;
 -- --------------------------------------------------------
 
 --

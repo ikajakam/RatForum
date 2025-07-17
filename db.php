@@ -1,10 +1,10 @@
 <?php
 // db.php – database connection
 
-$host = 'localhost';
+$host = 'ratforum-db';
 $db   = 'ratforum';
 $user = 'root';  // adjust if different
-$pass = '';      // default for XAMPP, change if needed
+$pass = 'root';      // default for XAMPP, change if needed
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
