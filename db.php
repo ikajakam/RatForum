@@ -1,7 +1,7 @@
 <?php
 // db.php – database connection
 
-$host = 'ratforum-db';
+$host = 'db';
 $db   = 'ratforum';
 $user = 'root';  // adjust if different
 $pass = 'root';      // default for XAMPP, change if needed
