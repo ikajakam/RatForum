@@ -9,8 +9,9 @@
 </form>
 
 <?php
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = trim($_POST['user']);
     $pass = $_POST['password'];
