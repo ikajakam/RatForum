@@ -57,7 +57,7 @@ $replies = $replyStmt->fetchAll();
         <small>
             By <?= htmlspecialchars($reply['username']) ?> at <?= $reply['created_at'] ?>
             <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $reply['user_id']): ?>
-                | <a href="edit_post.php?id=<?= $reply['id'] ?>">✏️ Edit</a>
+                | <a href="edit_comment.php?id=<?= $reply['id'] ?>">✏️ Edit</a>
             <?php endif; ?>
         </small>
     </div>
