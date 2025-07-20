@@ -25,17 +25,19 @@ if (!$user) {
 <div style="max-width:600px;margin:20px auto;background:#fff;padding:20px;border-radius:8px;">
     <p><strong>Username:</strong> <?= htmlspecialchars($user['username']) ?></p>
     <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
-    <p><strong>Bio:</strong><br> <?= nl2br(htmlspecialchars($user['bio'])) ?></p>
-    <p><strong>Signature:</strong><br> <?= nl2br(htmlspecialchars($user['signature'])) ?></p>
+    <p><strong>Bio:</strong><br> <?= nl2br(htmlspecialchars($user['bio'] ?? '')) ?></p>
+    <p><strong>Signature:</strong><br> <?= nl2br(htmlspecialchars($user['signature'] ?? '')) ?></p>
+
 
     <h3>Your PC Showcase</h3>
     <ul>
-        <li><strong>CPU:</strong> <?= htmlspecialchars($user['showcase_cpu']) ?></li>
-        <li><strong>GPU:</strong> <?= htmlspecialchars($user['showcase_gpu']) ?></li>
-        <li><strong>RAM:</strong> <?= htmlspecialchars($user['showcase_ram']) ?></li>
-        <li><strong>Storage:</strong> <?= htmlspecialchars($user['showcase_storage']) ?></li>
-        <li><strong>Cooling:</strong> <?= htmlspecialchars($user['showcase_cooling']) ?></li>
-        <li><strong>PSU:</strong> <?= htmlspecialchars($user['showcase_psu']) ?></li>
+        <li><strong>CPU:</strong> <?= htmlspecialchars($user['showcase_cpu'] ?? '') ?></li>
+        <li><strong>GPU:</strong> <?= htmlspecialchars($user['showcase_gpu'] ?? '') ?></li>
+        <li><strong>RAM:</strong> <?= htmlspecialchars($user['showcase_ram'] ?? '') ?></li>
+        <li><strong>Storage:</strong> <?= htmlspecialchars($user['showcase_storage'] ?? '') ?></li>
+        <li><strong>Cooling:</strong> <?= htmlspecialchars($user['showcase_cooling'] ?? '') ?></li>
+        <li><strong>PSU:</strong> <?= htmlspecialchars($user['showcase_psu'] ?? '') ?></li>
+
         <?php if (!empty($user['showcase_image'])): ?>
     <h3>Your System Image</h3>
     <img src="<?= htmlspecialchars($user['showcase_image']) ?>" style="max-width:400px;">

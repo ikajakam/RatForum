@@ -1,3 +1,5 @@
+<?php ob_start(); ?>
+
 <?php
 session_start();
 include 'db.php';
@@ -35,3 +37,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+<?php ob_end_flush(); ?>

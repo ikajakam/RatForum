@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="style.css">
+
+<div class="menu">
+    <img src="logo.png" alt="RatForum">
+    <span>RatForum</span>
+    <nav>
+        <a href="index.php">Home</a>
+
+                    <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
+            </nav>
+</div>
+
+<h2>RatForum Message Board</h2>
+<div style="max-width:800px;margin: 20px auto;">
+            <div style="padding: 15px; background: white; margin-bottom: 15px; border-radius: 8px;">
+            <h3>aaa</h3>
+            <p>aaa</p>
+<small>
+    Posted by <strong>tester</strong>
+    on 2025-07-20 00:12:45</small><br>
+
+
+            <a href="thread.php?id=10">💬 View Replies / Reply</a>
+        </div>
+            <div style="padding: 15px; background: white; margin-bottom: 15px; border-radius: 8px;">
+            <h3>dsgsdhrs</h3>
+            <p>hfdsrfsdherfsdh</p>
+<small>
+    Posted by <strong>tester</strong>
+    on 2025-07-20 00:12:33</small><br>
+
+
+            <a href="thread.php?id=9">💬 View Replies / Reply</a>
+        </div>
+            <div style="padding: 15px; background: white; margin-bottom: 15px; border-radius: 8px;">
+            <h3>dsgsdhrs</h3>
+            <p>hfdsrfsdherfsdh</p>
+<small>
+    Posted by <strong>tester</strong>
+    on 2025-07-20 00:09:44</small><br>
+
+
+            <a href="thread.php?id=8">💬 View Replies / Reply</a>
+        </div>
+            <div style="padding: 15px; background: white; margin-bottom: 15px; border-radius: 8px;">
+            <h3>ffgdgdf</h3>
+            <p>fdgdfgweds</p>
+<small>
+    Posted by <strong>test</strong>
+    on 2025-07-16 23:47:06</small><br>
+
+
+            <a href="thread.php?id=6">💬 View Replies / Reply</a>
+        </div>
+            <div style="padding: 15px; background: white; margin-bottom: 15px; border-radius: 8px;">
+            <h3>What games are you benchmarking?</h3>
+            <p>I just tested Cyberpunk 2077 with full ray tracing. Insane performance!</p>
+<small>
+    Posted by <strong>ratuser1</strong>
+    on 2025-07-16 23:37:22</small><br>
+
+
+            <a href="thread.php?id=1">💬 View Replies / Reply</a>
+        </div>
+    
+    <!-- Pagination -->
+    <div style="text-align: center; margin-top: 20px;">
+                    <a href="?page=1" 
+               style="margin: 0 5px; font-weight:bold;">
+                1            </a>
+                    <a href="?page=2" 
+               style="margin: 0 5px; ">
+                2            </a>
+            </div>
+</div>
+<!--
+    Dev note: admin login for testing
+    username: admin
+    password: ratAdmin!23
+-->

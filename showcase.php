@@ -42,12 +42,13 @@ $user = $stmt->fetch();
 
 <h2>Edit Your PC Showcase</h2>
 <form method="post">
-    CPU: <input type="text" name="cpu" value="<?= htmlspecialchars($user['showcase_cpu']) ?>"><br><br>
-    GPU: <input type="text" name="gpu" value="<?= htmlspecialchars($user['showcase_gpu']) ?>"><br><br>
-    RAM: <input type="text" name="ram" value="<?= htmlspecialchars($user['showcase_ram']) ?>"><br><br>
-    Storage: <input type="text" name="storage" value="<?= htmlspecialchars($user['showcase_storage']) ?>"><br><br>
-    Cooling: <input type="text" name="cooling" value="<?= htmlspecialchars($user['showcase_cooling']) ?>"><br><br>
-    PSU: <input type="text" name="psu" value="<?= htmlspecialchars($user['showcase_psu']) ?>"><br><br>
+    <p>CPU: <?= htmlspecialchars($user['cpu'] ?? '') ?></p>
+    <p>GPU: <?= htmlspecialchars($user['gpu'] ?? '') ?></p>
+    <p>RAM: <?= htmlspecialchars($user['ram'] ?? '') ?></p>
+    <p>Storage: <?= htmlspecialchars($user['storage'] ?? '') ?></p>
+    <p>Cooling: <?= htmlspecialchars($user['cooling'] ?? '') ?></p>
+    <p>PSU: <?= htmlspecialchars($user['psu'] ?? '') ?></p>
+
     <button type="submit">Update Showcase</button>
 </form>
 
